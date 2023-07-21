@@ -189,3 +189,68 @@ showSlide6(currentSlide6);
 }
 
 showSlide6(currentSlide6);
+
+
+// JavaScript for the seven slider
+let currentSlide7 = 0;
+const slides7 = document.querySelectorAll('#slider7 img');
+const totalSlides7 = slides7.length;
+
+function showSlide7(slideIndex) {
+slides7.forEach((slide) => (slide.style.display = 'none'));
+slides7[slideIndex].style.display = 'block';
+
+// Remove active class from all boxes
+for (let i = 0; i < totalSlides7; i++) {
+  const box = document.getElementById(`box7-${i}`);
+  box.classList.remove('active');
+}
+
+// Add active class to the clicked box
+const box = document.getElementById(`box7-${slideIndex}`);
+box.classList.add('active');
+}
+
+function changeSlide7(n) {
+currentSlide7 = n;
+if (currentSlide7 >= totalSlides7) {
+  currentSlide7 = 0;
+} else if (currentSlide7 < 0) {
+  currentSlide7 = totalSlides7 - 1;
+}
+showSlide7(currentSlide7);
+}
+
+showSlide7(currentSlide7);
+
+// JavaScript for the eight slider
+let currentSlide8 = 0;
+const slides8 = document.querySelectorAll('#slider8 img');
+const totalSlides8 = slides8.length;
+
+function showSlide8(slideIndex) {
+slides8.forEach((slide) => (slide.style.display = 'none'));
+slides8[slideIndex].style.display = 'block';
+
+// Remove active class from all boxes
+for (let i = 0; i < totalSlides8; i++) {
+  const box = document.getElementById(`box8-${i}`);
+  box.classList.remove('active');
+}
+
+// Add active class to the clicked box
+const box = document.getElementById(`box8-${slideIndex}`);
+box.classList.add('active');
+}
+
+function changeSlide8(n) {
+currentSlide8 = n;
+if (currentSlide8 >= totalSlides8) {
+  currentSlide8 = 0;
+} else if (currentSlide8 < 0) {
+  currentSlide8 = totalSlides8 - 1;
+}
+showSlide8(currentSlide8);
+}
+
+showSlide8(currentSlide8);
