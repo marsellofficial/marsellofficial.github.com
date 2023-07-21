@@ -1,0 +1,272 @@
+:root {
+  --clr-red: #E42424;
+  --clr-blue: #1ccc25;
+  --clr-yellow: #E8CC76;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.wrapper {
+  margin-inline: auto;
+  align-items: center;
+  width: min(90%, 50rem);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #eff2f5;
+  font-size: 1.6rem;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #434445;
+  position: relative;
+}
+
+h1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  height: .2rem;
+  width: 5rem;
+  background-color: var(--clr-red);
+}
+
+h2{
+  font-size: 2rem;
+  font-weight: 600;
+  color: #434445;
+  position: relative;
+}
+
+h2::before{
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  height: .2rem;
+  width: 5rem;
+}
+
+h3{
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #6cb4fc;
+  position: relative;
+}
+
+h3::before{
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  height: .2rem;
+  width: 5rem;
+}
+
+p {
+  font-size: 1.4rem;
+  color: #434445;
+}
+
+.img-profile {
+  position: relative;
+}
+
+.img-profile img {
+  position: absolute;
+  /* Center the element */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.img-profile .square-box {
+  position: absolute;
+  width: 110px; /* Sesuaikan ukuran kotak sesuai kebutuhan */
+  height: 25px; /* Sesuaikan ukuran kotak sesuai kebutuhan */
+  top: 90px;
+  border-radius: 5px;
+  background-color: #ff6f00; /* Sesuaikan warna latar belakang kotak sesuai kebutuhan */
+  z-index: 1000;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 4px;
+  padding-left: 1px;
+}
+
+.img-profile .square-box i {
+  position: absolute;
+  left: 15px; /* Menetapkan posisi ikon di sebelah kiri */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.img-profile .square-box span {
+  margin-left: 20px; /* Menetapkan jarak antara ikon dan teks */
+}
+
+.circle {
+  width: 110px;
+  height: 110px;
+  background: linear-gradient(122.32deg, #E42424 13.13%, #E8CC76 56.27%, #1C8DCC 95.15%);
+  border-radius: 50%;
+  animation: circleRotate 4s linear infinite;
+}
+
+@keyframes circleRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.card {
+  background-color: #fff;
+  position: relative; /* Ganti Menjadi Relative Agar Elemen Child Nya Tetap*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  border-radius: .8rem;
+  margin: auto;
+  padding: 1.8rem 3.2rem;
+  box-shadow: 0 2px 24px #022b5710;
+}
+
+.card .rectangle {
+  width: 90px; /* Sesuaikan ukuran kotak sesuai kebutuhan */
+  height: 25px; /* Sesuaikan ukuran kotak sesuai kebutuhan */
+  background-color: #000000; /* Sesuaikan warna latar belakang kotak sesuai kebutuhan */
+  border-radius: 5px; /* Sesuaikan radius sudut kotak sesuai kebutuhan */
+  text-align: justify;
+  color: white;
+  font-size: 14px;
+  padding-top: 5px;
+  padding-left: 4px;
+}
+
+.card .img-temp {
+  position: absolute; 
+  width: 100%;
+  overflow: hidden; /* Kasih Hidden Biar Ga Keluar Div Cik */
+  top: -30px;
+  border-radius: 4px;
+
+}
+
+/* Add styles for the slider container */
+.slider .slider1 .slider2 .slider3 {
+  overflow: hidden;
+  width: 303px; /* Adjust the width based on your image width */
+  position: relative;
+  transition: transform 0.5s ease; /* Add transition for smooth sliding */
+}
+
+.slider .slider1 .slider2 slider3 center {
+  display: flex;
+  justify-content: center;
+  transition: transform 0.5s ease; /* Add transition for smooth sliding */
+}
+
+.slider .slider1 .slider2 .slider3 .slider-content {
+  display: flex; /* Add flex to center the images */
+}
+
+.slider .slider1 .slider2 img {
+  margin: 0 5px; /* Add a margin for spacing between images */
+  overflow: hidden;
+  transition: transform 0.5s ease; /* Add transition for smooth sliding */
+}
+
+
+/* Style for navigation dots */
+.navigation-button {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  height: 20px; /* Adjust the height of the box */
+  width: 20px; /* Adjust the width of the box */
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px; /* Adjust the font size of the number inside the box */
+  color: #fff; 
+}
+
+/* Additional style to indicate active box */
+.active {
+  background-color: #007bff; /* Adjust the background color of the active box */
+}
+
+
+
+.card_links {
+  display: flex;
+  flex-direction: column;
+  
+  gap: .8rem;
+  margin-top: 1.2rem;
+}
+
+.card_links--item {
+  border: .1rem solid #e0e1e1;
+  border-radius: 5rem;
+  padding: 1.2rem 2.4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: .4s ease;
+}
+
+
+.card_links--item:hover {
+  transform: scale(1.06);
+}
+
+.card_links--item a {
+  text-decoration: none;
+  font-family: 'Space Mono', monospace;
+  color: #5e6062;
+  font-size: 1.4rem;
+}
+
+i {
+  color: var(--clr-blue);
+}
+
+.credits {
+  font-size: 1.2rem;
+  color: #7a7a7a;
+  display: block;
+  text-align: center;
+  padding: 2.4rem 0;
+}
+
+.credits a {
+  color: var(--clr-red);
+  text-decoration: none;
+}
