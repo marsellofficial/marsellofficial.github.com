@@ -254,3 +254,36 @@ showSlide8(currentSlide8);
 }
 
 showSlide8(currentSlide8);
+
+
+// JavaScript for the nine slider
+let currentSlide9 = 0;
+const slides9 = document.querySelectorAll('#slider9 img');
+const totalSlides9 = slides9.length;
+
+function showSlide9(slideIndex) {
+slides9.forEach((slide) => (slide.style.display = 'none'));
+slides9[slideIndex].style.display = 'block';
+
+// Remove active class from all boxes
+for (let i = 0; i < totalSlides9; i++) {
+  const box = document.getElementById(`box9-${i}`);
+  box.classList.remove('active');
+}
+
+// Add active class to the clicked box
+const box = document.getElementById(`box9-${slideIndex}`);
+box.classList.add('active');
+}
+
+function changeSlide9(n) {
+currentSlide9 = n;
+if (currentSlide9 >= totalSlides9) {
+  currentSlide9 = 0;
+} else if (currentSlide9 < 0) {
+  currentSlide9 = totalSlides9 - 1;
+}
+showSlide9(currentSlide9);
+}
+
+showSlide9(currentSlide9);
